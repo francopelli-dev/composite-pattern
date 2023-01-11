@@ -1,5 +1,6 @@
 package org.example.model.entities;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Compuesto implements Equipo{
@@ -7,7 +8,10 @@ public class Compuesto implements Equipo{
     private int total = 0;
     private int consumoTotal = 0;
 
+    public Compuesto() {
+        this.componentes  = new ArrayList<Equipo>();
 
+    }
 
     public void addEquipo(Equipo e) {
         this.componentes.add(e);
